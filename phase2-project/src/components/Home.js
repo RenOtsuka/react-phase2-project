@@ -3,8 +3,8 @@ import React from "react";
 function Home(){
     return(
         <div>
-            <br/>
-            <h1>Welcome to my JSX SPA Project</h1>
+            <h1>Home Page</h1>
+            <h2>Welcome to my JSX SPA Project</h2>
         </div>
     );
 }
