@@ -1,9 +1,9 @@
 import React from "react";
 
-function Form({name, img, handleNewName, handleNewImg}){
+function Form({name, img, handleNewName, handleNewImg, addToy}){
     return(
         <div>
-            <form>
+            <form onSubmit={addToy}>
                 <h4>Enter Toy here</h4>
                 <input type="text" name="name" placeholder="Enter name here..." value={name} onChange={handleNewName}/>
                 <br/>
