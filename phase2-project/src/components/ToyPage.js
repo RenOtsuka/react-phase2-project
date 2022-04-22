@@ -30,6 +30,29 @@ function ToyPage(){
         setToyImg(e.target.value);
     }
 
+    function addToy(e){
+        e.preventDefault();
+
+        fetch(`http://localhost:3001/toys`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({
+                name: toyName,
+                image: toyImg,
+                likes: 0,
+            })
+        })
+        .then(r => r.json())
+        .then(data => setToyList([...toyList, data]))
+        
+
+        setToyName("");
+        setToyImg("");
+    }
+
     return(
         <div>
             <h1>Toy Page</h1>
@@ -40,6 +63,7 @@ function ToyPage(){
             img={toyImg} 
             handleNewName={handleNewName} 
             handleNewImg={handleNewImg}
+            addToy={addToy}
             /> : null}
             <ToyList list={toyList}/>
         </div>
