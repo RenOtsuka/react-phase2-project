@@ -54,9 +54,9 @@ function ToyPage(){
     }
 
     return(
-        <div>
+        <div className="ToyPage">
             <h1>Toy Page</h1>
-            <button onClick={toggle}>Click Here to add a toy</button>
+            <button onClick={toggle}>Click Here to add a new toy</button>
             {toggleForm 
             ? <Form 
             name={toyName} 
@@ -65,6 +65,7 @@ function ToyPage(){
             handleNewImg={handleNewImg}
             addToy={addToy}
             /> : null}
+            <br/>
             <ToyList list={toyList}/>
         </div>
     );
