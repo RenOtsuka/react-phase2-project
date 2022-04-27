@@ -5,6 +5,7 @@ function ToyList({list}){
     const toyList = list.map(item => (
         <ToyItem 
         key={item.id}
+        id={item.id}
         name={item.name}
         image={item.image}
         likes={item.likes}/>
