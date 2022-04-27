@@ -11,7 +11,7 @@ function ToyList({list}){
     ));
 
     return(
-        <ul>
+        <ul className="ToyList">
             {toyList}
         </ul>
     );
